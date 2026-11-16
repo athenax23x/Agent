@@ -40,7 +40,10 @@ function wp_seed_run() {
     $legal = '<p>Content to be added by site owner.</p>';
 
     $faq = [
-        ['How long does shipping take?', 'Orders ship within 2 business days. Delivery takes 3 to 7 business days within the US.'],
+        ['Do you make the clothes yourselves?', 'No. Wright Parel is a made-to-order label: we design and select the range, and our partner suppliers make and ship each garment to the specification and fabric we choose. See our <a href="/about-us/">About Us</a> page for how that works.'],
+        ['How long does shipping take?', 'Orders are passed to our suppliers within 1 business day. They dispatch in 2 to 5 business days, and delivery takes a further 3 to 7 business days, so allow up to 14 business days in total.'],
+        ['Why did my order arrive in more than one package?', 'Items can come from different suppliers, so they travel separately and may arrive on different days. You get a tracking number for each parcel and are not charged extra for a split delivery.'],
+        ['Where do you ship from?', 'From our suppliers\' facilities, which are chosen for the item you order. Because of that, the packaging may not carry our branding.'],
         ['What is your return policy?', 'Unworn items can be returned within 30 days. See our Refund &amp; Returns page for details.'],
         ['How do I find my size?', 'Each product page lists measurements. If you are between sizes, we suggest sizing up.'],
         ['How should I care for my garments?', 'Wash cold, hang dry, and follow the care label on each piece.'],
