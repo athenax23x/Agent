@@ -125,7 +125,7 @@ add_filter('woocommerce_sale_flash', fn() => '<span class="onsale">Sale</span>')
 
 // Trust notes under the add-to-cart button.
 add_action('woocommerce_single_product_summary', function () {
-    echo '<ul class="wr-assurances"><li>Free shipping on orders over $150</li><li>Free returns within 30 days</li><li>Ships in 2 business days</li></ul>';
+    echo '<ul class="wr-assurances"><li>Free shipping on orders over $150</li><li>Free returns within 30 days</li><li>Dispatched in 2&ndash;5 business days</li></ul>';
 }, 35);
 
 require_once __DIR__ . '/inc/seed-content.php';
