@@ -46,7 +46,8 @@
   var COLOURS = {
     black: '#141414', white: '#fbfbfa', grey: '#8a8a88', gray: '#8a8a88',
     charcoal: '#3a3a38', stone: '#cfcbc4', sand: '#ded6c8', navy: '#1e2432',
-    ecru: '#e8e2d6', cream: '#f1ebdf', olive: '#4a4a3c', brown: '#5a4636'
+    ecru: '#e8e2d6', cream: '#f1ebdf', olive: '#4a4a3c', brown: '#5a4636',
+    camel: '#c19a6b', indigo: '#2f3a4a', oatmeal: '#ddd6c8'
   };
 
   function buildSwatches(form) {
