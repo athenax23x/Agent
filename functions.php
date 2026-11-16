@@ -1,5 +1,5 @@
 <?php
-define('WR_VERSION', '2.0.0');
+define('WR_VERSION', '3.0.0');
 
 add_action('after_setup_theme', function () {
     add_theme_support('title-tag');
@@ -19,6 +19,16 @@ add_action('after_setup_theme', function () {
 add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style('wrightparel', get_stylesheet_uri(), [], WR_VERSION);
     wp_enqueue_script('wrightparel', get_theme_file_uri('assets/js/site.js'), [], WR_VERSION, ['strategy' => 'defer', 'in_footer' => true]);
+    wp_localize_script('wrightparel', 'wrData', [
+        'cartUrl'  => function_exists('wc_get_page_permalink') ? wc_get_page_permalink('cart') : home_url('/cart/'),
+        'addToCart' => class_exists('WC_AJAX') ? WC_AJAX::get_endpoint('add_to_cart') : home_url('/?wc-ajax=add_to_cart'),
+        'strings'  => [
+            'adding' => 'Adding…',
+            'added'   => 'Added to cart',
+            'failed'  => 'Sorry, that could not be added.',
+            'viewCart' => 'View cart',
+        ],
+    ]);
 });
 
 add_action('wp_head', function () {
@@ -106,3 +116,6 @@ add_action('woocommerce_single_product_summary', function () {
 }, 35);
 
 require_once __DIR__ . '/inc/seed-content.php';
+require_once __DIR__ . '/inc/storefront.php';
+require_once __DIR__ . '/inc/contact-form.php';
+require_once __DIR__ . '/inc/seo.php';
