@@ -1,7 +1,7 @@
 /*
 Theme Name: Wright Parel
 Description: Minimal monotone apparel theme for WooCommerce.
-Version: 3.0.0
+Version: 4.0.0
 Requires at least: 6.0
 Requires PHP: 7.4
 License: GPL-2.0-or-later
@@ -102,7 +102,7 @@ button,input,select,textarea{font:inherit;color:inherit}
 .wr-cat{position:relative;overflow:hidden;display:block;background:var(--g100)}
 .wr-cat img{width:100%;aspect-ratio:4/5;object-fit:cover;transition:transform .9s var(--ease)}
 .wr-cat:hover img{transform:scale(1.04)}
-.wr-cat__label{position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:space-between;align-items:baseline;padding:18px 20px;background:linear-gradient(transparent,rgba(17,17,17,.04));font-size:.78rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;mix-blend-mode:difference;color:#fff}
+.wr-cat__label{position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:space-between;align-items:baseline;padding:40px 20px 18px;background:linear-gradient(transparent,rgba(17,17,17,.62));font-size:.78rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:#fff}
 .wr-cat__label small{font-size:.7rem;letter-spacing:.06em;text-transform:none;opacity:.75}
 
 /* Product grid (shortcode + archives) */
