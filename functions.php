@@ -1,5 +1,5 @@
 <?php
-define('WR_VERSION', '3.0.0');
+define('WR_VERSION', '4.0.0');
 
 add_action('after_setup_theme', function () {
     add_theme_support('title-tag');
@@ -43,9 +43,19 @@ add_filter('woocommerce_enqueue_styles', function ($styles) {
     return $styles;
 });
 
-add_filter('woocommerce_placeholder_img_src', fn() => get_theme_file_uri('assets/img/p-tee.jpg'));
+add_filter('woocommerce_placeholder_img_src', fn() => wr_asset_url('p-tee.jpg'));
 
 /* Helpers */
+/**
+ * Theme image URL with a version query string.
+ *
+ * Hostinger's CDN caches by full URL, so replacing an image's contents under the same
+ * filename keeps serving the old file. Versioning the URL makes a new file a new resource.
+ */
+function wr_asset_url($file) {
+    return add_query_arg('ver', WR_VERSION, get_theme_file_uri('assets/img/' . $file));
+}
+
 function wr_page_url($slug) {
     $p = get_page_by_path($slug);
     return $p ? get_permalink($p) : home_url('/' . $slug . '/');
@@ -125,7 +135,7 @@ add_filter('woocommerce_sale_flash', fn() => '<span class="onsale">Sale</span>')
 
 // Trust notes under the add-to-cart button.
 add_action('woocommerce_single_product_summary', function () {
-    echo '<ul class="wr-assurances"><li>Free shipping on orders over $150</li><li>Free returns within 30 days</li><li>Ships in 2 business days</li></ul>';
+    echo '<ul class="wr-assurances"><li>Free shipping on orders over $150</li><li>Free returns within 30 days</li><li>Dispatched in 2&ndash;5 business days</li></ul>';
 }, 35);
 
 require_once __DIR__ . '/inc/seed-content.php';

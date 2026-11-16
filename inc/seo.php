@@ -54,7 +54,7 @@ add_action('wp_head', function () {
         $product = wc_get_product(get_the_ID());
         if ($product && $product->get_image_id()) $image = wp_get_attachment_image_url($product->get_image_id(), 'large');
     }
-    if (!$image) $image = get_theme_file_uri('assets/img/editorial.jpg');
+    if (!$image) $image = wr_asset_url('editorial.jpg');
 
     printf('<meta property="og:site_name" content="%s">' . "\n", esc_attr(get_bloginfo('name')));
     printf('<meta property="og:type" content="%s">' . "\n", is_singular('product') ? 'product' : 'website');
@@ -67,8 +67,8 @@ add_action('wp_head', function () {
 
 add_action('wp_head', function () {
     if (has_site_icon()) return;
-    printf('<link rel="icon" href="%s" sizes="any">' . "\n", esc_url(get_theme_file_uri('assets/img/favicon-48.png')));
-    printf('<link rel="apple-touch-icon" href="%s">' . "\n", esc_url(get_theme_file_uri('assets/img/favicon-192.png')));
+    printf('<link rel="icon" href="%s" sizes="any">' . "\n", esc_url(wr_asset_url('favicon-48.png')));
+    printf('<link rel="apple-touch-icon" href="%s">' . "\n", esc_url(wr_asset_url('favicon-192.png')));
 }, 6);
 
 add_action('wp_head', function () {
@@ -80,7 +80,7 @@ add_action('wp_head', function () {
                 '@type' => 'Organization',
                 'name'  => get_bloginfo('name'),
                 'url'   => home_url('/'),
-                'logo'  => get_theme_file_uri('assets/img/favicon-192.png'),
+                'logo'  => wr_asset_url('favicon-192.png'),
             ],
             [
                 '@type'           => 'WebSite',

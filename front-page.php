@@ -1,6 +1,6 @@
 <?php
 get_header();
-$img = fn($f) => esc_url(get_theme_file_uri('assets/img/' . $f));
+$img = fn($f) => esc_url(wr_asset_url($f));
 $cat_imgs = ['tops' => 'p-tee.jpg', 'bottoms' => 'p-denim.jpg', 'outerwear' => 'p-overcoat.jpg', 'accessories' => 'p-tote.jpg'];
 ?>
 <section class="wr-hero">
