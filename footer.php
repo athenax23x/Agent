@@ -35,7 +35,7 @@
           <ul>
             <li><a href="<?php echo esc_url(wr_page_url('about-us')); ?>">About Us</a></li>
             <li><a href="<?php echo esc_url(wr_page_url('terms-and-conditions')); ?>">Terms &amp; Conditions</a></li>
-            <li><a href="<?php echo esc_url(wr_page_url('privacy-policy')); ?>">Privacy Policy</a></li>
+            <li><a href="<?php echo esc_url(wr_privacy_url()); ?>">Privacy Policy</a></li>
           </ul>
         </div>
       </div>
