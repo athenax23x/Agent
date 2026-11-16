@@ -25,6 +25,10 @@ hPanel → **Websites → wrightparel.works → Advanced → Git**
 3. Deploy directory: `public_html/wp-content/themes/wrightparel`.
 4. Click **Deploy**. Every later push to `main` redeploys automatically.
 
+If the deploy directory still ends in a stray period (`.../themes/wrightparel.`), change
+it to `public_html/wp-content/themes/wrightparel` and deploy again. The theme then switches
+itself to the clean folder (`inc/theme-folder.php`) and asset URLs lose the period.
+
 Deploys replace the folder's files, so make theme changes here, not in
 WordPress's theme editor.
 
