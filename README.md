@@ -28,6 +28,17 @@ hPanel → **Websites → wrightparel.works → Advanced → Git**
 Deploys replace the folder's files, so make theme changes here, not in
 WordPress's theme editor.
 
+### After a deploy, check the active theme
+
+Hostinger's deploy replaces the theme folder, and WordPress falls back to a
+default theme if the folder is missing while a request comes in. After any
+deploy that changes files, open **Appearance → Themes** and confirm **Wright
+Parel** is still active. If it is not, activate it and the site returns to
+normal immediately.
+
+New content is added by the dashboard button (see `inc/seed-content.php`),
+which is safe to run more than once.
+
 ## Content access (WordPress REST API)
 
 Content (products, pages, menus) is managed through the live site's API, not this repo.
