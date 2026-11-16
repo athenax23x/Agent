@@ -29,7 +29,7 @@ function wr_contact_form_shortcode() {
     <form class="contact" method="post" action="<?php echo esc_url(admin_url('admin-post.php')); ?>">
       <input type="hidden" name="action" value="wr_contact">
       <?php wp_nonce_field('wr_contact_send', 'wr_contact_nonce'); ?>
-      <p class="wr-hp"><label for="wr-website">Website</label><input id="wr-website" type="text" name="wr_website" tabindex="-1" autocomplete="off"></p>
+      <div class="wr-hp" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden"><input type="text" name="wr_website" tabindex="-1" autocomplete="off"></div>
       <label for="wr-name">Name</label>
       <input id="wr-name" type="text" name="wr_name" required maxlength="120" autocomplete="name">
       <label for="wr-email">Email</label>

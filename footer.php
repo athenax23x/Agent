@@ -41,9 +41,37 @@
       </div>
     </div>
     <div class="wr-footer__mark" aria-hidden="true">Wright Parel</div>
+    <div class="wr-footer__trust">
+      <address class="wr-footer__contact">
+        <strong>Wright Apparel</strong>
+        <span>485 Brantley Cove CIR, Grovetown, GA 30813, United States</span>
+        <span><a href="mailto:wrightapparel@hotmail.com">wrightapparel@hotmail.com</a> &middot; <a href="tel:+17622489684">(762) 248-9684</a></span>
+      </address>
+      <?php $pay = wr_payment_methods(); ?>
+      <div class="wr-footer__pay">
+        <?php if ($pay['cards']) : ?>
+          <p class="wr-footer__paylabel">Secure checkout. We accept</p>
+          <ul class="wr-paybrands">
+            <?php foreach (wr_card_brands() as $brand) : ?>
+              <li><?php echo esc_html($brand); ?></li>
+            <?php endforeach; ?>
+          </ul>
+        <?php endif; ?>
+        <?php if ($pay['other']) : ?>
+          <p class="wr-footer__paylabel"><?php echo $pay['cards'] ? 'Also available:' : 'Payment:'; ?> <?php echo esc_html(implode(', ', $pay['other'])); ?></p>
+        <?php endif; ?>
+        <?php if (!$pay['cards'] && !$pay['other']) : ?>
+          <p class="wr-footer__paylabel">Secure checkout over an encrypted connection.</p>
+        <?php endif; ?>
+      </div>
+    </div>
     <div class="wr-footer__base">
-      <span>&copy; <?php echo esc_html(date('Y')); ?> Wright Parel</span>
-      <span>wrightparel.works</span>
+      <span>&copy; <?php echo esc_html(date('Y')); ?> Wright Apparel. All rights reserved.</span>
+      <ul class="wr-footer__legal" aria-label="Legal">
+        <?php foreach (wr_legal_pages() as $slug => $label) : ?>
+          <li><a href="<?php echo esc_url(wr_legal_url($slug)); ?>"><?php echo esc_html($label); ?></a></li>
+        <?php endforeach; ?>
+      </ul>
     </div>
   </div>
 </footer>

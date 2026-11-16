@@ -33,8 +33,18 @@ function wr_meta_description() {
     }
     if (!$desc && (is_front_page() || (function_exists('is_shop') && is_shop()))) $desc = $fallback;
     if (!$desc) $desc = $fallback;
-    $desc = trim(preg_replace('/\s+/', ' ', wp_strip_all_tags((string) $desc)));
-    return $desc ? wp_html_excerpt($desc, 155, '…') : '';
+    $desc = preg_replace('#</?(?:p|h[1-6]|li|dt|dd|td|th|tr|div|br)\b[^>]*>#i', ' ', (string) $desc);
+    $desc = trim(preg_replace('/\s+/', ' ', wp_strip_all_tags($desc)));
+    return $desc ? wr_trim_description($desc) : '';
+}
+
+/** Shortens to a whole sentence where one fits, otherwise to a whole word. */
+function wr_trim_description($text, $max = 155) {
+    if (mb_strlen($text) <= $max) return $text;
+    $cut = mb_substr($text, 0, $max);
+    if (preg_match('/^(.{70,}[.!?])(?:\s|$)/su', $cut, $m)) return $m[1];
+    $cut = preg_replace('/\s+\S*$/u', '', $cut);
+    return rtrim($cut, " ,;:—-") . '…';
 }
 
 add_action('wp_head', function () {
