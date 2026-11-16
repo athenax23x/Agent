@@ -1,5 +1,5 @@
 <?php
-define('WR_VERSION', '4.0.0');
+define('WR_VERSION', '4.1.0');
 
 add_action('after_setup_theme', function () {
     add_theme_support('title-tag');
@@ -142,3 +142,4 @@ require_once __DIR__ . '/inc/seed-content.php';
 require_once __DIR__ . '/inc/storefront.php';
 require_once __DIR__ . '/inc/contact-form.php';
 require_once __DIR__ . '/inc/seo.php';
+require_once __DIR__ . '/inc/legal.php';
