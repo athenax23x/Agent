@@ -1,7 +1,7 @@
 <?php
 get_header();
 $img = fn($f) => esc_url(get_theme_file_uri('assets/img/' . $f));
-$cat_imgs = ['tops' => 'p-tee.jpg', 'bottoms' => 'p-trouser.jpg', 'outerwear' => 'p-overcoat.jpg', 'accessories' => 'p-tote.jpg'];
+$cat_imgs = ['tops' => 'p-tee.jpg', 'bottoms' => 'p-denim.jpg', 'outerwear' => 'p-overcoat.jpg', 'accessories' => 'p-tote.jpg'];
 ?>
 <section class="wr-hero">
   <div class="wr-hero__text">
@@ -13,7 +13,7 @@ $cat_imgs = ['tops' => 'p-tee.jpg', 'bottoms' => 'p-trouser.jpg', 'outerwear' =>
       <a class="wr-link" href="<?php echo esc_url(wr_page_url('about-us')); ?>">Our approach</a>
     </div>
   </div>
-  <figure class="wr-hero__media"><img src="<?php echo $img('hero.jpg'); ?>" alt="Wool overcoat in pale gray on a dark background" width="1200" height="1500" fetchpriority="high"></figure>
+  <figure class="wr-hero__media"><img src="<?php echo $img('hero.jpg'); ?>" alt="Linen shirt on a wooden hanger against a soft neutral wall" width="1200" height="1500" fetchpriority="high"></figure>
 </section>
 
 <div class="wr-strip" aria-hidden="true">
@@ -48,7 +48,7 @@ $cat_imgs = ['tops' => 'p-tee.jpg', 'bottoms' => 'p-trouser.jpg', 'outerwear' =>
 </section>
 
 <section class="wr-editorial">
-  <figure class="wr-editorial__media"><img src="<?php echo $img('editorial.jpg'); ?>" alt="Black heavyweight tee on a stone background" loading="lazy" width="1600" height="1125"></figure>
+  <figure class="wr-editorial__media"><img src="<?php echo $img('editorial.jpg'); ?>" alt="Rail of neutral garments in taupe, sage and grey" loading="lazy" width="1400" height="984"></figure>
   <div class="wr-editorial__text">
     <p class="wr-eyebrow">Our approach</p>
     <h2 class="wr-display wr-display--md">Fewer things, <em>made properly.</em></h2>
