@@ -143,3 +143,4 @@ require_once __DIR__ . '/inc/storefront.php';
 require_once __DIR__ . '/inc/contact-form.php';
 require_once __DIR__ . '/inc/seo.php';
 require_once __DIR__ . '/inc/legal.php';
+require_once __DIR__ . '/inc/theme-folder.php';

@@ -147,6 +147,7 @@ SHIPPING = (
         ("Supplier dispatch", "2 to 5 business days"),
         ("Delivery", "3 to 7 business days after dispatch. Allow up to 14 business days from order to doorstep."),
         ("Shipping cost", "[wr_shipping_rates format=inline]"),
+        ("Carriers", "USPS, UPS or FedEx"),
         ("Tracking", "Emailed for every parcel"),
     )
     + "<h2>1. How we fulfil orders</h2>"
@@ -161,13 +162,15 @@ SHIPPING = (
     "<p>Orders are passed to our suppliers the same or next business day, Monday to Friday, excluding public holidays. Orders placed at the weekend are processed from Monday. Suppliers dispatch within 2 to 5 business days, and made-to-order items can take longer. Where we know a piece takes extra time, the product page says so.</p>"
     "<h2>5. Delivery time</h2>"
     "<p>Standard delivery takes 3 to 7 business days after dispatch, and up to 14 business days in total from the order date. Remote areas can take longer. Once each parcel leaves the supplier you will receive its tracking number by email.</p>"
-    "<h2>6. Tracking</h2>"
+    "<h2>6. Carriers</h2>"
+    "<p>Parcels travel with national carriers: USPS, UPS or FedEx, depending on the supplier and the size and weight of the parcel. We do not charge extra for the carrier used. The carrier name and tracking number are shown in your dispatch email, so you always know who has your order.</p>"
+    "<h2>7. Tracking</h2>"
     "<p>You will receive a dispatch email with a tracking link for each parcel. If tracking has not updated for more than 5 business days, contact us with your order number.</p>"
-    "<h2>7. Lost, delayed or damaged parcels</h2>"
+    "<h2>8. Lost, delayed or damaged parcels</h2>"
     "<p>If a parcel arrives damaged, keep the packaging and contact us within 7 days with photographs, and we will replace the item or refund you. If a parcel is lost in transit, let us know and we will open a claim with the carrier and either resend or refund your order.</p>"
-    "<h2>8. Addresses</h2>"
+    "<h2>9. Addresses</h2>"
     "<p>Please check your address before completing checkout. We cannot redirect a parcel once it has been dispatched. If an order is returned to us because the address was wrong or nobody could receive it, we will contact you to arrange redelivery, and the cost of the second delivery is your responsibility.</p>"
-    "<h2>9. Changing or cancelling an order</h2>"
+    "<h2>10. Changing or cancelling an order</h2>"
     "<p>Contact us as soon as you can and we will do our best. Once a supplier has dispatched an item we can no longer cancel it, but you can still return it under our Refund &amp; Returns policy.</p>"
     + contact_section("Questions about a delivery? Write to us or call, and include your order number.")
 )
