@@ -45,20 +45,25 @@ function wp_seed_run() {
         ['How do I find my size?', 'Each product page lists measurements. If you are between sizes, we suggest sizing up.'],
         ['How should I care for my garments?', 'Wash cold, hang dry, and follow the care label on each piece.'],
         ['Can I change or cancel my order?', 'Contact us within 12 hours of ordering and we will do our best to help.'],
-        ['Do you ship internationally?', 'Placeholder answer: update this once your shipping zones are set.'],
+        ['Do you ship internationally?', 'We currently ship within the United States only. Write to us if you are outside the US and we will see what we can do.'],
     ];
     $faq_html = '<div class="faq">';
     foreach ($faq as $f) $faq_html .= '<details><summary>' . $f[0] . '</summary><p>' . $f[1] . '</p></details>';
     $faq_html .= '</div>';
 
-    $contact = '<p>Questions about an order, sizing or anything else? Write to us and we will reply within two business days.</p>'
-        . '<p><strong>Email</strong><br>hello@wrightparel.works</p><p><strong>Hours</strong><br>Monday to Friday, 9am to 5pm</p>'
-        . '<p><strong>Studio</strong><br>123 Placeholder Street, City, State 00000</p>'
+    $contact = '<p>Questions about an order, sizing, fabric or anything else? Write to us, call, or use the form below and we will reply within two business days.</p>'
+        . '<p><strong>Email</strong><br><a href="mailto:wrightapparel@hotmail.com">wrightapparel@hotmail.com</a></p>'
+        . '<p><strong>Phone</strong><br><a href="tel:+17622489684">(762) 248-9684</a></p>'
+        . '<p><strong>Opening hours</strong><br>Monday to Friday, 9am to 5pm Eastern Time</p>'
+        . '<p><strong>Business address</strong><br>Wright Apparel (sole proprietorship)<br>485 Brantley Cove CIR<br>Grovetown, GA 30813<br>United States</p>'
+        . '<p><strong>Website</strong><br>wrightparel.works</p>'
         . '<h2 id="wr-contact">Send a message</h2><div class="wr-contact-form">[wrightparel_contact_form]</div>';
 
-    $about = '<p>Wright Parel makes everyday clothing with a plain, deliberate point of view. We work in small runs, choose fabrics for how they age, and keep our palette to black, white and gray so each piece works with the rest.</p>'
-        . '<h2>Materials</h2><p>Heavyweight cotton, wool blends and washed linen, sourced from mills we can name. Placeholder copy: replace with your own details.</p>'
-        . '<h2>Making</h2><p>Every garment is cut and sewn in limited batches, then checked by hand before it ships.</p>';
+    $about = '<p>Wright Parel is the clothing label of Wright Apparel, a small studio in Grovetown, Georgia. We work in small runs, choose fabrics for how they age, and keep our palette to black, white and gray so each piece works with the rest.</p>'
+        . '<h2>Materials</h2><p>Heavyweight cotton, wool blends and washed linen, chosen for how they wear rather than how they photograph. We name the fabric and weight on every product page.</p>'
+        . '<h2>Making</h2><p>Every garment is cut and sewn in limited batches, then checked by hand before it ships.</p>'
+        . '<h2>Caring for your clothes</h2><p>Wash cold, inside out, and hang to dry where you can.</p>'
+        . '<h2>Contact</h2><p>Write to <a href="mailto:wrightapparel@hotmail.com">wrightapparel@hotmail.com</a> or call (762) 248-9684.</p>';
 
     $ids = [];
     $ids['home'] = wp_seed_page('Home', 'home', '');

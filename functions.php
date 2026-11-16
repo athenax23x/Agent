@@ -58,6 +58,19 @@ function wr_cat_url($slug) {
     $t = get_term_by('slug', $slug, 'product_cat');
     return $t ? get_term_link($t) : home_url('/product-category/' . $slug . '/');
 }
+/**
+ * Privacy policy link. Prefers the page designated in Settings → Privacy, but falls back to
+ * the page with the real policy when the designated one is still the empty placeholder that
+ * WordPress ships (Shop Managers cannot edit the designated page).
+ */
+function wr_privacy_url() {
+    $id = (int) get_option('wp_page_for_privacy_policy');
+    if ($id && get_post_status($id) === 'publish') {
+        $text = trim(wp_strip_all_tags((string) get_post_field('post_content', $id)));
+        if (strlen($text) > 80) return get_permalink($id);
+    }
+    return wr_page_url('privacy');
+}
 function wr_cart_count() {
     return (function_exists('WC') && WC()->cart) ? WC()->cart->get_cart_contents_count() : 0;
 }
