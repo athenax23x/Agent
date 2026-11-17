@@ -161,7 +161,7 @@ SHIPPING = (
     "<h2>4. Processing time</h2>"
     "<p>Orders are passed to our suppliers the same or next business day, Monday to Friday, excluding public holidays. Orders placed at the weekend are processed from Monday. Suppliers dispatch within 2 to 5 business days, and made-to-order items can take longer. Where we know a piece takes extra time, the product page says so.</p>"
     "<h2>5. Delivery time</h2>"
-    "<p>Standard delivery within the United States takes 3 to 7 business days after dispatch, and up to 14 business days in total from the order date. International orders typically take 7 to 21 business days after dispatch, depending on the destination and customs clearance. Remote areas can take longer. Once each parcel leaves the supplier you will receive its tracking number by email.</p>"
+    "<p>Standard delivery within the United States takes 3 to 7 business days after dispatch, and up to 14 business days in total from the order date. International orders typically take 7 to 14 days after dispatch, depending on the destination and customs clearance. Remote areas can take longer. Once each parcel leaves the supplier you will receive its tracking number by email.</p>"
     "<h2>6. Carriers</h2>"
     "<p>Parcels travel with national carriers: USPS, UPS or FedEx, depending on the supplier and the size and weight of the parcel. We do not charge extra for the carrier used. The carrier name and tracking number are shown in your dispatch email, so you always know who has your order.</p>"
     "<h2>7. Tracking</h2>"
