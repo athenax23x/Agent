@@ -62,7 +62,7 @@ $cat_imgs = ['tops' => 'p-tee.jpg', 'bottoms' => 'p-denim.jpg', 'outerwear' => '
 </section>
 
 <section class="wr-assure wr-container">
-  <div><h3>Free shipping</h3><p>On all orders over $150 within the US.</p></div>
+  <div><h3>Free shipping</h3><p>On all orders over $150, worldwide.</p></div>
   <div><h3>30-day returns</h3><p>Unworn pieces, returned free of charge.</p></div>
   <div><h3>Secure checkout</h3><p>Encrypted payments, no stored card details.</p></div>
   <div><h3>Real support</h3><p>Write to us and a person replies within two days.</p></div>

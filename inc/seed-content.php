@@ -48,7 +48,7 @@ function wp_seed_run() {
         ['How do I find my size?', 'Each product page lists measurements. If you are between sizes, we suggest sizing up.'],
         ['How should I care for my garments?', 'Wash cold, hang dry, and follow the care label on each piece.'],
         ['Can I change or cancel my order?', 'Contact us within 12 hours of ordering and we will do our best to help.'],
-        ['Do you ship internationally?', 'We currently ship within the United States only. Write to us if you are outside the US and we will see what we can do.'],
+        ['Do you ship internationally?', 'Yes, we ship worldwide. Shipping rates for your country are shown at checkout. Any customs duties or import taxes your country charges are paid by you on delivery.'],
     ];
     $faq_html = '<div class="faq">';
     foreach ($faq as $f) $faq_html .= '<details><summary>' . $f[0] . '</summary><p>' . $f[1] . '</p></details>';
