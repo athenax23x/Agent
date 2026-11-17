@@ -48,19 +48,16 @@
         <span><a href="mailto:wrightapparel@hotmail.com">wrightapparel@hotmail.com</a> &middot; <a href="tel:+17622489684">(762) 248-9684</a></span>
       </address>
       <?php $pay = wr_payment_methods(); ?>
+      <?php if ($pay['cards']) : ?>
       <div class="wr-footer__pay">
-        <?php if ($pay['cards']) : ?>
-          <p class="wr-footer__paylabel">Secure checkout. We accept</p>
-          <ul class="wr-paybrands">
-            <?php foreach (wr_card_brands() as $brand) : ?>
-              <li><?php echo esc_html($brand); ?></li>
-            <?php endforeach; ?>
-          </ul>
-        <?php endif; ?>
-        <?php if (!$pay['cards']) : ?>
-          <p class="wr-footer__paylabel">Secure checkout over an encrypted connection.</p>
-        <?php endif; ?>
+        <p class="wr-footer__paylabel">Secure checkout. We accept</p>
+        <ul class="wr-paybrands">
+          <?php foreach (wr_card_brands() as $brand) : ?>
+            <li><?php echo esc_html($brand); ?></li>
+          <?php endforeach; ?>
+        </ul>
       </div>
+      <?php endif; ?>
     </div>
     <div class="wr-footer__base">
       <span>&copy; <?php echo esc_html(date('Y')); ?> Wright Apparel. All rights reserved.</span>
