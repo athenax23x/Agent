@@ -57,10 +57,7 @@
             <?php endforeach; ?>
           </ul>
         <?php endif; ?>
-        <?php if ($pay['other']) : ?>
-          <p class="wr-footer__paylabel"><?php echo $pay['cards'] ? 'Also available:' : 'Payment:'; ?> <?php echo esc_html(implode(', ', $pay['other'])); ?></p>
-        <?php endif; ?>
-        <?php if (!$pay['cards'] && !$pay['other']) : ?>
+        <?php if (!$pay['cards']) : ?>
           <p class="wr-footer__paylabel">Secure checkout over an encrypted connection.</p>
         <?php endif; ?>
       </div>
