@@ -41,14 +41,9 @@
       </div>
     </div>
     <div class="wr-footer__mark" aria-hidden="true">Wright Parel</div>
+    <?php $pay = wr_payment_methods(); ?>
+    <?php if ($pay['cards']) : ?>
     <div class="wr-footer__trust">
-      <address class="wr-footer__contact">
-        <strong>Wright Apparel</strong>
-        <span>485 Brantley Cove CIR, Grovetown, GA 30813, United States</span>
-        <span><a href="mailto:wrightapparel@hotmail.com">wrightapparel@hotmail.com</a> &middot; <a href="tel:+17622489684">(762) 248-9684</a></span>
-      </address>
-      <?php $pay = wr_payment_methods(); ?>
-      <?php if ($pay['cards']) : ?>
       <div class="wr-footer__pay">
         <p class="wr-footer__paylabel">Secure checkout. We accept</p>
         <ul class="wr-paybrands">
@@ -57,8 +52,8 @@
           <?php endforeach; ?>
         </ul>
       </div>
-      <?php endif; ?>
     </div>
+    <?php endif; ?>
     <div class="wr-footer__base">
       <span>&copy; <?php echo esc_html(date('Y')); ?> Wright Apparel. All rights reserved.</span>
       <ul class="wr-footer__legal" aria-label="Legal">
