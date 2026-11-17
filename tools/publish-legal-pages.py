@@ -19,7 +19,7 @@ EMAIL = "wrightapparel@hotmail.com"
 PHONE = "(762) 248-9684"
 ADDRESS = "485 Brantley Cove CIR, Grovetown, GA 30813, United States"
 WEB = "wrightparel.works"
-ENTITY = "Wright Apparel is registered in the State of Georgia, United States, and trades as Wright Parel."
+ENTITY = "Wright Apparel is registered in the State of Georgia, United States."
 
 
 def facts(*rows):
@@ -30,8 +30,6 @@ def facts(*rows):
 def details_table():
     return (
         '<div class="wr-table-wrap"><table class="wr-size-table"><tbody>'
-        "<tr><th>Business name</th><td>Wright Apparel</td></tr>"
-        "<tr><th>Trading as</th><td>Wright Parel</td></tr>"
         f"<tr><th>Business address</th><td>{ADDRESS}</td></tr>"
         f'<tr><th>Email</th><td><a href="mailto:{EMAIL}">{EMAIL}</a></td></tr>'
         f'<tr><th>Phone</th><td><a href="tel:+17622489684">{PHONE}</a></td></tr>'
