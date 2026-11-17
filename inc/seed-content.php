@@ -58,7 +58,7 @@ function wp_seed_run() {
         . '<p><strong>Email</strong><br><a href="mailto:wrightapparel@hotmail.com">wrightapparel@hotmail.com</a></p>'
         . '<p><strong>Phone</strong><br><a href="tel:+17622489684">(762) 248-9684</a></p>'
         . '<p><strong>Opening hours</strong><br>Monday to Friday, 9am to 5pm Eastern Time</p>'
-        . '<p><strong>Business address</strong><br>Wright Apparel (sole proprietorship)<br>485 Brantley Cove CIR<br>Grovetown, GA 30813<br>United States</p>'
+        . '<p><strong>Business address</strong><br>Wright Apparel<br>485 Brantley Cove CIR<br>Grovetown, GA 30813<br>United States</p>'
         . '<p><strong>Website</strong><br>wrightparel.works</p>'
         . '<h2 id="wr-contact">Send a message</h2><div class="wr-contact-form">[wrightparel_contact_form]</div>';
 
