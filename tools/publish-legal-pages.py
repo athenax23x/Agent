@@ -140,7 +140,7 @@ PRIVACY = (
 SHIPPING = (
     f"<p>This Shipping Policy explains where we deliver, what it costs, and when your order will arrive. {ENTITY}</p>"
     + facts(
-        ("We ship to", "Addresses within the United States"),
+        ("We ship to", "Worldwide. Rates for your country are shown at checkout."),
         ("Order passed to supplier", "Within 1 business day"),
         ("Supplier dispatch", "2 to 5 business days"),
         ("Delivery", "3 to 7 business days after dispatch. Allow up to 14 business days from order to doorstep."),
@@ -155,11 +155,13 @@ SHIPPING = (
     "[wr_shipping_rates]"
     "<p>Rates are in US dollars and the rate that applies to your order is shown at checkout before you pay. When an order qualifies for free shipping, that is the option you are offered.</p>"
     "<h2>3. Where we ship</h2>"
-    f'<p>We currently ship within the United States only. If you are outside the United States and would like to order, write to <a href="mailto:{EMAIL}">{EMAIL}</a> and we will see what we can do.</p>'
+    "<p>We ship worldwide. Shipping rates for your country are shown at checkout before you pay, and the rate that applies to your order is the one you are offered.</p>"
+    "<p><strong>Customs duties and import taxes.</strong> Orders sent outside the United States may be subject to import duties, taxes and clearance fees charged by your country's customs authority. These are set by your government, are not included in your order total, and are your responsibility. Parcels held for unpaid charges may be delayed or returned to us.</p>"
+    f'<p>Questions about delivery to your country? Write to <a href="mailto:{EMAIL}">{EMAIL}</a>.</p>'
     "<h2>4. Processing time</h2>"
     "<p>Orders are passed to our suppliers the same or next business day, Monday to Friday, excluding public holidays. Orders placed at the weekend are processed from Monday. Suppliers dispatch within 2 to 5 business days, and made-to-order items can take longer. Where we know a piece takes extra time, the product page says so.</p>"
     "<h2>5. Delivery time</h2>"
-    "<p>Standard delivery takes 3 to 7 business days after dispatch, and up to 14 business days in total from the order date. Remote areas can take longer. Once each parcel leaves the supplier you will receive its tracking number by email.</p>"
+    "<p>Standard delivery within the United States takes 3 to 7 business days after dispatch, and up to 14 business days in total from the order date. International orders typically take 7 to 21 business days after dispatch, depending on the destination and customs clearance. Remote areas can take longer. Once each parcel leaves the supplier you will receive its tracking number by email.</p>"
     "<h2>6. Carriers</h2>"
     "<p>Parcels travel with national carriers: USPS, UPS or FedEx, depending on the supplier and the size and weight of the parcel. We do not charge extra for the carrier used. The carrier name and tracking number are shown in your dispatch email, so you always know who has your order.</p>"
     "<h2>7. Tracking</h2>"
@@ -178,13 +180,13 @@ REFUNDS = (
     + facts(
         ("Return window", "30 days from the day your parcel is delivered"),
         ("Condition", "Unworn, unwashed, with any tags attached"),
-        ("Return shipping", "Free within the United States. We send you a prepaid label."),
+        ("Return shipping", "Free within the United States. Outside the US, paid by you."),
         ("Refund timing", "Within 5 to 10 business days of us receiving your return"),
         ("Refunded to", "Your original payment method"),
         ("To start a return", f'Email <a href="mailto:{EMAIL}">{EMAIL}</a> with your order number'),
     )
     + "<h2>1. 30-day returns</h2>"
-    "<p>You may return any item within 30 days of delivery for a refund or exchange. Returns are free within the United States: we will send you a prepaid label. The 30 days run from the day the parcel is delivered.</p>"
+    "<p>You may return any item within 30 days of delivery for a refund or exchange. Returns are free within the United States: we will send you a prepaid label. For orders shipped outside the United States, return postage is paid by you. The 30 days run from the day the parcel is delivered.</p>"
     "<h2>2. Condition of returned items</h2>"
     "<p>Items must come back unworn, unwashed and free of odours, with any tags still attached and in the original packaging where possible. Please try garments on over your own clothing. We may refuse a refund, or offer a reduced one, if an item comes back clearly worn or damaged in a way that is not a manufacturing fault.</p>"
     "<h2>3. How to start a return</h2>"
