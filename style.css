@@ -1,7 +1,7 @@
 /*
 Theme Name: Wright Parel
 Description: Minimal monotone apparel theme for WooCommerce.
-Version: 4.1.0
+Version: 4.2.0
 Requires at least: 6.0
 Requires PHP: 7.4
 License: GPL-2.0-or-later
@@ -329,6 +329,7 @@ button,input,select,textarea{font:inherit;color:inherit}
 @media (max-width:520px){
   .wr-assure{grid-template-columns:1fr}
   .wr-footer__base{flex-direction:column;gap:6px}
+  .wr-footer .wr-footer__base{align-items:flex-start;gap:14px}
 }
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 
@@ -468,6 +469,10 @@ button,input,select,textarea{font:inherit;color:inherit}
 .wr-paybrands li{padding:6px 11px;border:1px solid #4a4a47;border-radius:3px;font-size:.7rem;letter-spacing:.06em;color:var(--paper)}
 .wr-footer .wr-footer__legal{display:flex;flex-wrap:wrap;gap:8px 24px;font-size:inherit}
 .wr-footer__base{border-top:1px solid #2c2c2c;gap:16px 32px;flex-wrap:wrap;align-items:center}
+.wr-footer .wr-cardlogos{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none;font-size:inherit}
+.wr-cardlogos li{display:block;line-height:0}
+/* Outline keeps dark-backed marks (Mastercard) visible on the dark footer. */
+.wr-cardlogos img{display:block;width:38px;height:24px;border-radius:3px;box-shadow:0 0 0 1px #3a3a38}
 
 @media (max-width:900px){
   .wr-legal{grid-template-columns:1fr;gap:28px;padding-top:28px}
