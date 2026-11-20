@@ -1,5 +1,5 @@
 <?php
-define('WR_VERSION', '4.1.0');
+define('WR_VERSION', '4.2.0');
 
 add_action('after_setup_theme', function () {
     add_theme_support('title-tag');

@@ -186,9 +186,14 @@ function wr_card_gateway_ids() {
     ]);
 }
 
-/** Card brands to name. Edit through the wr_card_brands filter once you know which you take. */
+/** Card brands shown in the footer: logo file in assets/img/cards => label. Edit through the wr_card_brands filter. */
 function wr_card_brands() {
-    return apply_filters('wr_card_brands', ['Visa', 'Mastercard', 'American Express', 'Discover']);
+    return apply_filters('wr_card_brands', [
+        'visa'       => 'Visa',
+        'mastercard' => 'Mastercard',
+        'amex'       => 'American Express',
+        'discover'   => 'Discover',
+    ]);
 }
 
 /**

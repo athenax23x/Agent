@@ -41,24 +41,16 @@
       </div>
     </div>
     <div class="wr-footer__mark" aria-hidden="true">Wright Parel</div>
-    <?php $pay = wr_payment_methods(); ?>
-    <?php if ($pay['cards']) : ?>
-    <div class="wr-footer__trust">
-      <div class="wr-footer__pay">
-        <p class="wr-footer__paylabel">Secure checkout. We accept</p>
-        <ul class="wr-paybrands">
-          <?php foreach (wr_card_brands() as $brand) : ?>
-            <li><?php echo esc_html($brand); ?></li>
-          <?php endforeach; ?>
-        </ul>
-      </div>
-    </div>
-    <?php endif; ?>
     <div class="wr-footer__base">
       <span>&copy; <?php echo esc_html(date('Y')); ?> Wright Apparel. All rights reserved.</span>
       <ul class="wr-footer__legal" aria-label="Legal">
         <?php foreach (wr_legal_pages() as $slug => $label) : ?>
           <li><a href="<?php echo esc_url(wr_legal_url($slug)); ?>"><?php echo esc_html($label); ?></a></li>
+        <?php endforeach; ?>
+      </ul>
+      <ul class="wr-cardlogos" aria-label="Payment cards">
+        <?php foreach (wr_card_brands() as $file => $label) : ?>
+          <li><img src="<?php echo esc_url(get_theme_file_uri('assets/img/cards/' . $file . '.svg') . '?ver=' . WR_VERSION); ?>" alt="<?php echo esc_attr($label); ?>" width="38" height="24" loading="lazy" decoding="async"></li>
         <?php endforeach; ?>
       </ul>
     </div>
